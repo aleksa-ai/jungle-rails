@@ -137,14 +137,14 @@ RSpec.describe User, type: :model do
     
     context 'given a login with with email having non-matching case' do
       it 'will successfully return the appropriate user information' do
-        user = User.create(
+        user = User.create!( # ! throws if creating fails
           name: 'Alex',
           email: 'Alex@lajv.com',
           password: 'burek',
           password_confirmation: 'burek',
         )
 
-        authenticate = User.authenticate_with_credentials(user.email, user.password)        
+        authenticate = User.authenticate_with_credentials('Alex@lajv.com', 'burek')        
         expect(authenticate).to eq(user)
       end
     end

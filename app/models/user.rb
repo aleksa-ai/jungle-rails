@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: { minimum: 3 }
   validates :password_confirmation, presence: true
 
+  #Activer Record callback; before saves user, will call the block & downcases the email
+  before_save { email.downcase! }
+
   def self.authenticate_with_credentials(email, password)
     user = User.find_by_email(email.strip.downcase)
     if user && user.authenticate(password)
