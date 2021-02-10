@@ -19,16 +19,10 @@ RSpec.feature "Visitor navigates to the product page by clicking on a product", 
     end
   end
 
-  scenario "They see all products" do
+  scenario "They product details" do
     visit root_path
 
     page.find(:link, 'Details »', match: :first).click
-
-    
-    #save_screenshot('test2_0.png') 
-
-    #sleep 1
-    #save_screenshot('test2_2.png') 
 
     expect(page).to have_css 'section.products-show', count: 1
     save_screenshot('test2_3.png') 
