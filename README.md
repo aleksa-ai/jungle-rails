@@ -1,9 +1,31 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+*This project has been delievered in the 10th week of Lighthouse Labs' Web Development Bootcamp. More than just about learning a new language, ecosystem and framework, it is moreso a simulation of the real world, as I've inherited an existing code base in a language / framework that I was not familiar with.*
+
+## Description
+
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails through examples.
+
+## Final Product
+
+| !["Main page with categories scroll-down"](public/docs/images/finalprodmain_withcategoriesnavbar.png) | !["Payment feature with Stripe"](public/docs/images/finalprodpayment.png) |
+| ------------- |:-------------:|
+| !["Order confirmation page"](public/docs/images/finalprodorder.png) | !["Visitor sign up with admin scroll-down"](public/docs/images/finalprodsignup_withadminnavbar.png) |
 
 
-## Setup
+## Dependencies
+
+* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+* PostgreSQL 9.x
+* Stripe
+
+## Tests
+* Capybara
+* Poltergeist
+  * Phantomjs (npm)
+* Database_cleaner
+
+## Getting Started
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
@@ -19,9 +41,3 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
-
-## Dependencies
-
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
